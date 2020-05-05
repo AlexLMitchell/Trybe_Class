@@ -1,0 +1,8 @@
+Internet
+Unix
+Bash
+node.js
+vscode
+slack
+zoom
+css
