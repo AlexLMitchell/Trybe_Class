@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+CSS Basics
+
+<style>
+<!-- inside style use tags to edit exactly what you want. ex: h2=secondary title
+body=background,<p>=paragraph, li= list etc.. -->
+h2 {
+	color: green;
+}
+#testid {
+	testcolor: test;
+}
+<!-- selecting specific elements to edit. use ID attributes with id=""
+then use # on style to tag ID -->
+.testclass {
+	testcolor: test;
+}
+<!-- Class id is similar to id but can be used on multiple elements to
+customize as a class action -->
+p {
+font-family: "Helvetica", sans-serif;
+}
+<!-- font-family customizes font always choose serif or sans-serif after comma
+in case current font isnt available. -->
+body {
+font-size: 11px;
+}
+h2 {
+font-size: 2em;
+}
+<!-- font size uses px to size the body font and "em" for headers. "em" being
+the relative size towards the font. -->
+p {
+font-weight: bold;
+font-style: italic;
+}
+<!-- font-weight serves as a way to change density of font.
+font-style serves to change style of font as in italic,etc.. -->
+font: italic 13px fantasy;
+<!-- short-hand property. to save space you can write just font and include
+style, size, and font. -->
+p {
+text-align: center;
+text decoration: none;
+text-shadow: 2px 2px 9px;
+}
+<!-- text-align is for moving text alignment. 
+text-decoration is for removing or adding features to text like underlining,
+dashing, etc.
+text-shadow changes the shadow of text. first px is right moving second px is
+downwards moving and third is blur. -->
+.testt {
+color: test;
+}
+<span class="testt">test</span>
+ <!-- span to change group of text but not all. maintains changes on the same 
+sentence without space or line break unlike div -->
+<!-- div to change whole elements. div blocks and spaces all inside it. -->
+#test-info {
+width: 70%
+height 180px
+overflow:-y: auto;
+overflow-x: hidden;
+}
+<!-- width and height control as you would expect. overflow is used in case text
+leaks the box you commanded and serves to make scroll bars or fix issue -->
+</style>
+
+
+
+</html>
