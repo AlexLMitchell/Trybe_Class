@@ -1,3 +1,14 @@
-Escreva um programa que defina três números em variáveis no seu começo e retorne true se uma das três for par. Caso contrário, ele retorna false.
+let valorA=4;
+let valorB=7;
+let valorC=16;
 
-Bonus: use somente um if.
+if (valorA % 2 === 0) {
+    console.log("True");
+}
+else if (valorB % 2 === 0) {
+    console.log("True");
+}
+else if (valorC % 2 === 0) {
+    console.log("True");
+}
+else console.log("False")
