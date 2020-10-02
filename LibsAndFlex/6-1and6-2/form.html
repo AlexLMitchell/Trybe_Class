@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/materialize.min.css" type="text/css" />
+    <script src="./js/materialize.min.js"></script>
+    <link rel="stylesheet" href="./css/style.css" type="text/css" />
+    <script src="./js/script.js"></script>
+  </head>
+  <body class="teal darken-4">
+    <header><h1 class="teal lighten-2">Trybe Form</h1></header>
+    <div class="row container grey lighten-5">
+      <form class="col s12 form" action="#">
+        <div class="row">
+          <div class="input-field col s12">
+            <input
+              type="text"
+              data="Nome"
+              id="name-input"
+              maxlength="40"
+              data-validate-field="name"
+              name="name"
+            />
+            <label for="name-input">Nome</label>
+          </div>
+          <div class="input-field col s6">
+            <input
+              type="email"
+              data="E-Mail"
+              id="email-input"
+              maxlength="50"
+              name="email"
+              data-validate-field="email"
+            />
+            <label for="email-input">E-Mail</label>
+          </div>
+          <div class="input-field col s6">
+            <input
+              type="number"
+              data="CPF"
+              id="cpf-input"
+              maxlength="11"
+              name="cpf"
+              data-validate-field="cpf"
+            />
+            <label for="cpf-input">CPF</label>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s4">
+            <p>
+              <input
+                type="text"
+                data="Endereço"
+                id="addr-input"
+                maxlength="200"
+                name="address"
+                data-validate-field="address"
+              />
+            </p>
+            <label for="addr-input">Endereço</label>
+          </div>
+          <div class="input-field col s4">
+            <p>
+              <input
+                type="text"
+                data="Cidade"
+                id="city-input"
+                maxlength="200"
+                name="city"
+                data-validate-field="city"
+              />
+            </p>
+            <label for="city-input">Cidade</label>
+          </div>
+          <div class="input-field col s2">
+            <p>
+              <select
+                name="state"
+                data="Estado"
+                id="state-input"
+                data-validate-field="state"
+              >
+              </select>
+            </p>
+            <label for="state-input">Estado</label>
+          </div>
+          <div class="input-field col s2">
+            <p>
+              <label>
+                <input name="house-input" data="Casa" type="radio" checked />
+                <span>Casa</span>
+              </label>
+            </p>
+            <p>
+              <label>
+                <input
+                  name="house-input"
+                  data="Apartamento"
+                  class="input"
+                  type="radio"
+                />
+                <span>Apartamento</span>
+              </label>
+            </p>
+          </div>
+        </div>
+        <div class="row">
+          <div class="input-field col s12">
+            <textarea
+              name="resume"
+              data="Resumo"
+              class="materialize-textarea"
+              id="resume-input"
+              cols="30"
+              rows="10"
+              maxlength="1000"
+              data-validate-field="resume"
+            ></textarea>
+            <label for="resume-input">Resumo do Curriculum</label>
+          </div>
+          <div class="input-field col s4">
+            <input
+              type="text"
+              data="Cargo"
+              name="job"
+              id="job-input"
+              maxlength="30"
+              data-validate-field="job"
+            />
+            <label for="job-input">Cargo</label>
+          </div>
+          <div class="input-field col s8">
+            <input
+              type="text"
+              data="Resumo cargo"
+              name="jobdesc"
+              id="jobdesc-input"
+              maxlength="500"
+              data-validate-field="jobdesc"
+            />
+            <label for="jobdesc-input">Resumo do Cargo</label>
+          </div>
+          <div class="input-field input col s3">
+            <input
+              type="text"
+              name="date"
+              data="Data"
+              class="datepicker"
+              placeholder="Data de início"
+              data-validate-field="date"
+            />
+          </div>
+        </div>
+        <div>
+          <button class="btn green form__btn" id="process-button">
+            Processar
+          </button>
+          <button class="btn red" id="clean-button">Limpar tudo</button>
+        </div>
+      </form>
+    </div>
+
+    <div id="modal" class="modal">
+      <div class="modal-content">
+        <h4>Resultado</h4>
+        <div class="result"></div>
+      </div>
+      <div class="modal-footer">
+        <a href="#!" class="modal-close waves-effect waves-green btn-flat"
+          >Agree</a
+        >
+      </div>
+    </div>
+
+    <script src="https://horprogs.github.io/Just-validate/dist/js/just-validate.min.js"></script>
+  </body>
+</html>

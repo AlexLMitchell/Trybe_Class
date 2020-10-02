@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8" />
+  <title>Cat Walk</title>
+ </head>
+ <body>
+  
+  <img style="position:absolute;" src="http://www.anniemation.com/clip_art/images/cat-walk.gif">
+  
+ </body>
+ <script>
+    const animations = {
+      walk : "http://www.anniemation.com/clip_art/images/cat-walk.gif",
+      dance : "https://gifimage.net/wp-content/uploads/2017/07/happy-dance-animated-gif-21.gif"
+    }
+
+    let img = document.querySelector("img");
+    img.style.left = "0px";
+    let timer = {};
+    let forward = true;
+
+    function dance(){
+      img.setAttribute("src", animations.dance);
+      timer = setTimeout(function(){
+        let p = parseInt(img.style.left);
+        img.setAttribute("src", animations.walk);
+        if(forward) img.style.left = (p+50).toString()+"px";
+        else img.style.left = (p-50).toString()+"px";
+        walk();
+      }, 3000);
+    }
+
+    function walk(){
+      let p = parseInt(img.style.left);
+      if(p>window.innerWidth || p<0) forward = !forward;
+
+      if(p > (window.innerWidth/2)-5 && p < (window.innerWidth/2)+5){
+        dance();
+        return;
+      }
+
+      if(forward){
+        img.style.transform = "scaleX(1)";
+        img.style.left = (p+10).toString()+"px";
+      } else {
+        img.style.transform = "scaleX(-1)";
+        img.style.left = (p-10).toString()+"px";
+      }
+      timer = setTimeout(walk, 50);
+    }
+    walk();
+ </script>
+</html>

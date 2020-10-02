@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+      @media screen and (max-width: 900px) and (min-width: 600px) {
+        .p600,
+        .p1100,
+        .p1500 {
+          display: none;
+        }
+        div.example {
+          font-size: 50px;
+          padding: 50px;
+          border: 8px solid black;
+          background: yellow;
+        }
+        div.example2 {
+          font-size: 50px;
+          padding: 50px;
+          border: 8px solid black;
+          display: none;
+        }
+      }
+      @media screen and (min-width: 900px) and (max-width: 1100px) {
+        .p600,
+        .p900,
+        .p1500 {
+          display: none;
+        }
+        div.example {
+          font-size: 50px;
+          padding: 50px;
+          border: 8px solid black;
+          background: blue;
+        }
+        div.example2 {
+          font-size: 50px;
+          padding: 50px;
+          border: 8px solid black;
+          background: red;
+        }
+      }
+      @media screen and (max-width: 600px) {
+        .p900,
+        .p1100,
+        .p1500 {
+          display: none;
+        }
+        div.example {
+          font-size: 50px;
+          padding: 50px;
+          border: 8px solid black;
+          display: none;
+        }
+        div.example2 {
+          font-size: 50px;
+          padding: 50px;
+          border: 8px solid black;
+          background: yellow;
+        }
+      }
+      @media screen and (min-width: 1500px) {
+        .p600,
+        .p1100,
+        .p900 {
+          display: none;
+        }
+        div.flex {
+          display: flex;
+        }
+        div.example {
+          font-size: 50px;
+          padding: 50px;
+          border: 8px solid black;
+          background: red;
+        }
+        div.example2 {
+          font-size: 50px;
+          padding: 50px;
+          border: 8px solid black;
+          background: yellow;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <h2>Change the appearance of DIV on different screen sizes</h2>
+    <div class="flex">
+      <div class="example">Example DIV.</div>
+      <div class="example2">Example DIV2.</div>
+    </div>
+
+    <p class="p600">
+      When the browser's width is below 600px, change the appearance of DIV.
+      <strong>Resize the browser window to see the effect</strong>.
+    </p>
+    <p class="p900">
+      When the browser's width is between 600 and 900px, change the appearance
+      of DIV. <strong>Resize the browser window to see the effect</strong>.
+    </p>
+    <p class="p1100">
+      When the browser's width is between 900 and 1100px, change the appearance
+      of DIV. <strong>Resize the browser window to see the effect</strong>.
+    </p>
+    <p class="p1500">
+      When the browser's width is over 1500px, change the appearance of DIV.
+      <strong>Resize the browser window to see the effect</strong>.
+    </p>
+  </body>
+</html>

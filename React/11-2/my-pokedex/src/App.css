@@ -1,0 +1,62 @@
+.App {
+  text-align: center;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  flex-flow: wrap;
+  box-sizing: border-box;
+  justify-content: center;
+  margin: 0 10%;
+}
+
+.title {
+  background-color: #282c34;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.BillPC{
+  display: flex;
+  justify-content: space-around;
+  border: black solid 1px;
+  width: 30%;
+  flex-grow: 1;
+  min-width: 250px;
+  flex-basis: 20px;
+  padding: 5px;
+  border-radius: 5px;
+  margin: 5px;
+  box-sizing: border-box;
+}
+
+.Psychic {
+  background-color: rgb(255, 82, 241);
+}
+
+.Dragon {
+  background-color: rgb(143, 123, 241);
+}
+
+.Normal {
+  background-color: rgb(105, 133, 105);
+}
+
+.Electric {
+  background-color: rgb(253, 251, 114);
+}
+
+.Poison {
+  background-color: rgb(170, 111, 170);
+}
+
+.Bug {
+  background-color: rgb(65, 138, 65);
+}
+
+.Fire {
+  background-color: rgb(243, 85, 85);
+}

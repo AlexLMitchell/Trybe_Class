@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset=utf-8 />
+<title>Calculator</title>
+</head>
+<body>
+
+  <label>Square this number:
+    <input type="number" id="square-input" size="2">
+  </label>
+  <button id="square-button">Calculate</button>
+  <br><br>
+  
+  <label>Half this number:
+    <input type="number" id="half-input" size="2">
+  </label>
+  <button id="half-button">Calculate</button>
+  <br><br>
+  
+  <label>
+    Fraction:
+    <input type="number" id="percent1-input" size="2">
+  </label>
+  <label>
+    Whole:
+    <input type="number" id="percent2-input" size="2">
+  </label>
+  <button id="percent-button">Calculate</button>
+  <br><br>
+  
+  <label>Calculate area of circle with radius:
+    <input type="number" id="area-input" size="2">
+  </label>
+  <button id="area-button">Calculate</button> 
+  <br><br>
+  <div id="solution"></div>
+</body>
+<script>
+  let input_array = document.querySelectorAll("input");
+  let button_array = document.querySelectorAll("button");
+
+  let squareNumber = function(number){
+    return Math.pow(Number(number), 2);
+  }
+  let halfNumber = function(number){
+    return Number(number)/2;
+  }
+  let percentOf = function(n1, n2){
+    return (n1/n2)*100;
+  }
+  let areaOfCircle = function(radius){
+    return Math.pow(Math.PI*radius, 2);
+  }
+
+  for(btn of button_array){
+    btn.addEventListener("click", calculate);
+  }
+
+  function calculate(button){
+    switch(button.target.id){
+      case "square-button":
+        printResult(squareNumber(input_array[0].value));
+        break;
+      case "half-button":
+        printResult(halfNumber(input_array[1].value));
+        break;
+      case "percent-button":
+        printResult(percentOf(input_array[2].value, input_array[3].value));
+        break;
+      case "area-button":
+        printResult(areaOfCircle(input_array[4].value));
+        break;
+    }
+  }
+
+  function printResult(result){
+    document.querySelector("#solution").innerHTML = result;
+  }
+</script>
+</html>
