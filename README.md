@@ -100,15 +100,15 @@ The program has more than **1,500 hours** of classroom and online classes and co
 - [x] 19-3: *React Hooks - useEffect and custom Hooks*
 - [x] 19-4: *[Project - Datatable StarWars with Context API and Hooks]()*
 ##### Block 19: Final Front-end Project
-- [ ] 20-1: *[Project - Recipe App]()*
+- [x] 20-1: *[Project - Recipe App]()*
 
 ## Back-end development :hourglass_flowing_sand:
 ##### Block 20: Introduction - Relational Databases
-- [ ] 21-1: *SQL database*
-- [ ] 21-2: *Finding data in a database*
-- [ ] 21-3: *Filtering data specifically*
-- [ ] 21-4: *Manipulating tables*
-- [ ] 21-5: *[Project - All For One]()*
+- [x] 21-1: *SQL database*
+- [x] 21-2: *Finding data in a database*
+- [x] 21-3: *Filtering data specifically*
+- [x] 21-4: *Manipulating tables*
+- [x] 21-5: *[Project - All For One]()*
 ##### Block 21: Relational Databases
 - [ ] 22-1: *Most used functions in SQL*
 - [ ] 22-2: *Uncomplicating JOINs and UNIONs*
