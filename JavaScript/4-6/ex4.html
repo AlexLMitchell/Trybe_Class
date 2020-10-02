@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 4.5</title>
+    <style>
+      div {
+        border-color: black;
+        border-style: solid;
+      }
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+
+      .main-content .left-content {
+        background-color: green;
+        width: 60%;
+        margin-left: 0;
+        margin-right: auto;
+      }
+
+      .main-content .left-content .small-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 100%;
+      }
+
+      .main-content .right-content {
+        background-color: blue;
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .main-content .description {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+  </body>
+  <script>
+    let content = {
+        title: "Exercício 4.5 - JavaScript DOM",
+        numbers: ["Um", "Dois", "Três", "Quatro", "Cinco", "Seis", "Sete", "Oito"],
+        tags: ["Tag1", "Tag2", "Tag3"]
+    }
+    document.querySelector("body").appendChild(document.createElement("h1")).innerHTML = content.title;
+    let body = document.querySelector("body");
+    body.appendChild(document.createElement("div")).setAttribute("class", "main-content");
+    
+    document.querySelector("body > .main-content").appendChild(document.createElement("div")).setAttribute("class", "center-content");
+    document.querySelector(".main-content > .center-content").appendChild(document.createElement("p")).innerHTML = "Olá mundo!";
+
+    document.querySelector("body > .main-content").appendChild(document.createElement("div")).setAttribute("class", "left-content");
+    document.querySelector("body > .main-content").appendChild(document.createElement("div")).setAttribute("class", "right-content");
+
+    document.querySelector(".main-content > .left-content").appendChild(document.createElement("img")).setAttribute("src", "https://picsum.photos/200");
+    document.querySelector(".left-content img").setAttribute("class", "small-image");
+
+    document.querySelector(".main-content > .right-content").appendChild(document.createElement("ul")).setAttribute("id", "list");
+
+    content.numbers.forEach(number => {
+        document.querySelector("#list").appendChild(document.createElement("li")).innerHTML = number;
+    });
+
+    content.tags.forEach(tag => {
+      let h3 = document.createElement("h3");
+        document.querySelector("body > .main-content").appendChild(h3).innerHTML = tag;
+    });
+
+    document.querySelector("body > h1").className="title";
+    document.querySelectorAll(".main-content > h3").forEach((e) => {e.className="description";});
+
+    document.querySelector("body > .main-content").removeChild(document.querySelector(".left-content"));
+
+
+</script>
+</html>

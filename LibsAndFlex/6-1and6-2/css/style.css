@@ -1,0 +1,13 @@
+h1 {
+  text-align: center;
+}
+.container {
+  border: 16px solid;
+  border-radius: 16px;
+  margin-top: 16px;
+  padding: 32px;
+}
+
+.radio {
+  margin-bottom: 16px;
+}

@@ -1,0 +1,27 @@
+html {
+    box-sizing: border-box;
+  }
+  
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  
+  body {
+    width: 95%;
+    margin: auto;
+  }
+  
+  header nav ul {
+    padding: 0 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  
+  header nav li {
+    border: 1px solid red;
+    background-color: tomato;
+    
+    padding: 10px 20px;
+    list-style-type: none;
+  }

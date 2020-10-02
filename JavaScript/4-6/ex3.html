@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+</head>
+<body>
+    <div id="paiDoPai">
+        <div id="pai">
+          <div id="primeiroFilho"></div>
+          <div id="elementoOndeVoceEsta">
+            <div id="primeiroFilhoDoFilho" class="remove"></div>
+            <div id="segundoEUltimoFilhoDoFilho" class="remove"></div>
+          </div>
+          Atenção!
+          <div id="terceiroFilho" class="remove"></div>
+          <div id="quartoEUltimoFilho" class="remove"></div>
+        </div>
+    </div>
+    <script>
+        let element = document.getElementById("elementoOndeVoceEsta");
+        let removes_pai = document.querySelectorAll("#pai > .remove");
+        let removes = document.querySelectorAll("#elementoOndeVoceEsta > .remove");
+        removes_pai.forEach(e => {
+            element.parentElement.removeChild(e)
+        });
+        removes.forEach(e => {
+            element.removeChild(e)
+        });
+        
+    </script>
+</body>
+</html>

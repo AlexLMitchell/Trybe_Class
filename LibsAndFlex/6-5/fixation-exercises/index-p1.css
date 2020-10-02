@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.center {
+  width: 90%;
+  height: 100%;
+  background-color: #333;
+  margin: 0 auto;
+}
+
+.top {
+  width: 100%;
+  height: 20%;
+  background-color: red;
+  text-align: center;
+}
+
+.top > h1 {
+  color: black;
+  font-size: 2em;
+}
+
+.row {
+  display: flex;
+}
+
+.col {
+  width: 50%;
+  height: 100%;
+  padding: 10px;
+  text-align: center;
+  background-color: #999;
+}
+
+@media screen and (min-width: 320px) and (max-width: 568px) {
+  .center {
+    width: 100%;
+  }
+  .top {
+    background-color: yellow;
+  }
+  .top > h1 {
+    color: red;
+  }
+  .row {
+    flex-wrap: wrap;
+  }
+  .col {
+    width: 100%;
+  }
+}
